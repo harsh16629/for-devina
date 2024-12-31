@@ -1,5 +1,4 @@
-﻿
-var $window = $(window), gardenCtx, gardenCanvas, $garden, garden;
+﻿var $window = $(window), gardenCtx, gardenCanvas, $garden, garden;
 var clientWidth = $(window).width();
 var clientHeight = $(window).height();
 
@@ -128,7 +127,7 @@ function adjustWordsPosition() {
 }
 
 function adjustCodePosition() {
-	$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
+	$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2-100); 
 }
 
 function showLoveU() {

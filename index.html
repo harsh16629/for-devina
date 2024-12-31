@@ -23,7 +23,17 @@
 </head>
 
 <body>
-
+	
+	<style>
+        body {
+            background-image: url('bg_gif.gif');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }</style>
 <div id="mainDiv">
 	<div id="content">
 		<div id="code">
@@ -33,26 +43,26 @@
 			Do you remember the day we first met?<br />
 			<span class="comments">// Oh, that dreaded dating app called Hinge. </span><br />
 			Do you know what I felt when I first saw your pictures?<br />
-			<span class="comments">// A thousand arrows with bows for heads peircing my stomach</span><br />
+			<span class="comments">// A thousand arrows with bows for heads impaling my stomach</span><br />
 			Do you know what my first thought was?<br />
 			<span class="comments">// Jeez, I want to talk to her</span><br />
 			Do you know what my second thought was?<br />
 			<span class="comments">// Man, I'm no match for her</span><br />
-			The last 466 days with you have been like a dream for me<br />
-			<span class="comments">// And I never want to wake up</span><br />
-			Where will I be without you?<br />
-			<span class="comments">// I often ask myself</span><br />
-			Hell, is where I'll be<br />
+			There are lingering questions with brutal answers<br />
+			<span class="comments">// What will I do without you?</span><br />
+			Hell will be my lair<br />
 			<span class="comments">// Was I lucky to have found you?</span><br />
-			Blessed, is my answer<br />
+			Blessed, I swear<br />
 			<br>
-			We have been through fights, big and small, fun and heartbreaking<br />
+			The last <span id="daysElapsed"></span> days with you have been like a dream for me<br />
+			<span class="comments">// And I never want to wake up</span><br />
+			We have been through many fights, big and small, fun and heartbreaking<br />
 			<span class="comments">// And there will be more, I'm sure</span><br />
 			But I'll always be with you, even if you end up hating me<br />
-			<span class="comments">// I won't choose anyone else but you</span><br />
+			<span class="comments">// I won't choose anyone else, my love, I ensure</span><br />
 			<br>
 			This new year, I want to start another beautiful chapter with you by my side<br />
-			With a hint of chaos and an abudnance of love, I want you, and only you<br />
+			A ton of chaos and an abudnance of love, I want you, my soon-to-be bride<br />
 			<br>
 			My Princess<br />
 			My Devina<br />
@@ -87,6 +97,12 @@ together.setHours(16);
 together.setMinutes(30);
 together.setSeconds(0);
 together.setMilliseconds(0);
+
+var startDate = new Date(2023, 8, 24); // 24th September 2023
+var currentDate = new Date();
+var timeDiff = currentDate - startDate;
+var daysElapsed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+document.getElementById("daysElapsed").innerText = daysElapsed;
 
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
