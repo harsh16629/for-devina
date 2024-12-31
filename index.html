@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<link rel = "stylesheet" href = "heartStyle.css">
+
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>For my Devina</title>
+
+<style type="text/css">
+@font-face {
+	font-family: "Digital-7";
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+	
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">FOR MY PRINCESS</span><br />
+			<span class="comments">**/</span><br />
+			Do you remember the day we first met?<br />
+			<span class="comments">// The dreaded dating app called Hinge. </span><br />
+			Do you know what I felt when I first saw your pictures?<br />
+			<span class="comments">// A thousand arrows with bows for heads peircing my stomach</span><br />
+			Do you know what my first thought was?<br />
+			<span class="comments">// Jeez, I want to talk to her</span><br />
+			Do you know what my second thought was?<br />
+			<span class="comments">// Man, I'm no match for her</span><br />
+			The last 466 days with you have been like a dream for me
+			<span class="comments">// And I never want to wake up</span><br />
+			Where will I be without you?<br />
+			<span class="comments">// I often ask myself</span><br />
+			Hell, is where I'll be<br />
+			<span class="comments">// Was I lucky to have found you?</span><br />
+			Blessed, is my answer<br />
+			<br>
+			We have been through fights, big and small, fun and heartbreaking<br />
+			<span class="comments">// And there will be more, I'm sure</span><br />
+			But I'll always be with you, even if you end up hating me<br />
+			<span class="comments">// I won't choose anyone else but you</span><br />
+			<br>
+			This new year, I want to start another beautiful chapter with you by my side<br />
+			With a hint of chaos and an abudnance of love, I want you, and only you<br />
+			<br>
+			My Princess<br />
+			My Devina<br />
+			<br>
+			All mine.<br />
+			<br>
+			<span id="heartspan">
+			<a href="images.html"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					REMY X POOKIE
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 8, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
